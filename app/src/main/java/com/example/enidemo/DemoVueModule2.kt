@@ -27,6 +27,16 @@ class DemoVueModule2 : AppCompatActivity() {
             (it as Button).text = "Coucou";
             Log.i("EniDemoTest", String.format("J'ai cliqué sur le bouton dans le setOnClick"));
         }
+
+        // Récupérer l'intent avec les extras
+        val idDuExtra = intent.getIntExtra("id", 0);
+
+        // Récupérer une personne avec l'extra
+        val person = intent.getParcelableExtra<Person>("person")
+
+        Log.i("EniDemoTest", String.format("L'id récupéré est bien : %d", idDuExtra))
+
+        Log.i("EniDemoTest", String.format("La personne : %s %s", person!!.firstname, person!!.lastname))
     }
 
     fun onClickSignUp(view: View) {
