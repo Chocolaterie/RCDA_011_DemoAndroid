@@ -74,7 +74,6 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
         <!-- Le text du checkbox-->
         <TextView
             android:layout_width="wrap_content"
@@ -85,8 +84,10 @@
 
     <!-- Bouton Sign In -->
     <Button
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClickSignUp"
         android:text="Sign In" />
 
 </LinearLayout>
