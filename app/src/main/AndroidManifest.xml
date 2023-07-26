@@ -12,20 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EniDemo"
         tools:targetApi="31">
+        <activity
+            android:name=".RevisionKotlinActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".DemoVueModule2"
-            android:exported="true">
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <!-- Permet  de déterminé quelle est l'activité lancée par défaut-->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
