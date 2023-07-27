@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.enidemo.R
 import com.example.enidemo.databinding.FragmentArticleBinding
 
@@ -28,6 +29,9 @@ class ArticleFragment : Fragment() {
 
         var myFragmentView = DataBindingUtil.inflate<FragmentArticleBinding>(inflater, R.layout.fragment_article, container, false)
 
+        // Naviguer sur un autre fragment dans un fragment
+        // requireActivity().findNavController(R.id.myNavHost).navigate(R.id.action_homeFragment_to_articleFragment)
+        
         // Inflate the layout for this fragment
         return myFragmentView.root;
     }
