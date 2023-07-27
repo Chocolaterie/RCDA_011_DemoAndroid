@@ -30,4 +30,5 @@ class MainActivity : AppCompatActivity() {
         // 2 : Appeler une methode avec l'Intent à l'intérieur
         startActivity(intent)
     }
+
 }

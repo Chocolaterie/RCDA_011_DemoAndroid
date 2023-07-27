@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.enidemo.R
+import com.example.enidemo.databinding.FragmentArticleBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -22,7 +25,10 @@ class ArticleFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        var myFragmentView = DataBindingUtil.inflate<FragmentArticleBinding>(inflater, R.layout.fragment_article, container, false)
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_article, container, false)
+        return myFragmentView.root;
     }
 }

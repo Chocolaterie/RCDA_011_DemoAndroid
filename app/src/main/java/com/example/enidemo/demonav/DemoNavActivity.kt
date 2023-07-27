@@ -15,7 +15,7 @@ class DemoNavActivity : AppCompatActivity() {
 
         myView.navBtn.setOnClickListener {
             // Naviguer sans data binding
-            findNavController(R.id.myNavHost).navigate(R.id.action_homeFragment_to_articleFragment)
+            // findNavController(R.id.myNavHost).navigate(R.id.action_homeFragment_to_articleFragment)
         }
     }
 }

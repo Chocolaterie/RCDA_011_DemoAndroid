@@ -10,12 +10,11 @@
         android:orientation="vertical"
         tools:context=".demonav.DemoNavActivity">
 
-
         <Button
             android:id="@+id/navBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fragment2"
+            android:text="Open Fragment 2"
             />
 
         <!-- Router/NavController-->
