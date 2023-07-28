@@ -26,7 +26,7 @@ class ListViewActivity : AppCompatActivity() {
 
         // Envoyer une liste de donné
         // var listFirstnames = arrayListOf<String>("isaac", "morgan", "octavia")
-        //  myAdapter.addAll(listFirstnames)
+        // myAdapter.addAll(listFirstnames)
 
         var listPersons = arrayListOf<Person>(Person("isaac", "test"), Person("laurent", "le vrai"))
         myAdapter.addAll(listPersons)
