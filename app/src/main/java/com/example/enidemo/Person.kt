@@ -7,4 +7,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 class Person (var firstname : String, var lastname : String) : Parcelable {
 
+    override fun toString(): String {
+        return String.format("Person : %s %s", firstname, lastname)
+    }
 }

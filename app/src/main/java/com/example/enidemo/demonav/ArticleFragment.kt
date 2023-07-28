@@ -31,7 +31,7 @@ class ArticleFragment : Fragment() {
 
         // Naviguer sur un autre fragment dans un fragment
         // requireActivity().findNavController(R.id.myNavHost).navigate(R.id.action_homeFragment_to_articleFragment)
-        
+
         // Inflate the layout for this fragment
         return myFragmentView.root;
     }
