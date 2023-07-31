@@ -16,7 +16,7 @@
         android:theme="@style/Theme.EniDemo"
         tools:targetApi="31">
         <activity
-            android:name=".demolist.RecyclerViewActivity"
+            android:name=".demolist.DemoAsyncActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,12 +24,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".demolist.ListViewActivity"
+            android:name=".demolist.RecyclerViewActivity"
             android:exported="true">
         </activity>
         <activity
-            android:name=".DemoWebviewActivity"
+            android:name=".demolist.ListViewActivity"
             android:exported="true"></activity>
+        <activity
+            android:name=".DemoWebviewActivity"
+            android:exported="true" />
         <activity
             android:name=".demonav.DemoNavActivity"
             android:exported="true" />
