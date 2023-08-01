@@ -18,6 +18,7 @@ class DemoAsyncActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_demo_async)
 
         var person = Person("Isaac", "Zian")
