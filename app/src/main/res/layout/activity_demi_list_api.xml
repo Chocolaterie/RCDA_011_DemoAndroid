@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".demoapi.DemoApiActivity">
+    tools:context=".demoapi.DemiListApiActivity">
 
     <Button
         android:id="@+id/btnAppelApi"
@@ -14,11 +14,9 @@
         android:text="Appel API"
         />
 
-    <TextView
-        android:id="@+id/tvJoke"
+    <ListView
+        android:id="@+id/lvMovies"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:text="Aucune blague"
-        />
+        android:layout_height="match_parent"/>
+
 </LinearLayout>
