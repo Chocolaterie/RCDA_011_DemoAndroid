@@ -11,49 +11,68 @@ class BookingManager {
      * @param id : L'id de l'element qu'on reserve : Attention ça peut être un Hotel ou une Table
      * @param isHotel : Pour savoir si le <T> ca va etre HotelRoom ou Table
      */
-    fun createBooking(customer: Person, persons : List<Person>, id : Int, isHotel : Boolean) : ManagerResponse {
+    fun createBookingRoom(customer: Person, persons: List<Person>, id: Int): ManagerResponse<BookingRoom> {
 
-        var response = ManagerResponse()
+        var  response = ManagerResponse<BookingRoom>()
 
-        // Si c'est u nhotel et qu'on veut reserver une chambre
-        if (isHotel){
-            // recupere l'hotel room via l'id
-            response = ManagerResponse()
-            var room = HotelRoom()
-            var booking = Booking<HotelRoom>(persons, room)
+        // recupere l'hotel room via l'id
+        var room = HotelRoom()
+        var booking = BookingRoom(persons, room)
 
-            if (id < 1){
-                // Reponse Metier RG-48589 : Error
-                response.code = "705"
-                response.message = "l'id n'est valide" + id
-            }
-
-            // Response Metier RG-48589
-            response.code = Constantes.CD_SUCCESS_CMN
-            response.message = "Chambre reservée avec succès"
-            response.data = booking
+        if (id < 1) {
+            // Reponse Metier RG-48589 : Error
+            response.code = "705"
+            response.message = "l'id n'est valide" + id
         }
-        else {
-            // recupere un table dans le resto via l'id
-            var table = Table()
-            var booking = Booking<Table>(persons, table)
 
-            // Response Metier RG-48510
-            response.code = "203"
-            response.message = "Table reservée avec succès"
-            response.data = booking
-        }
+        // Response Metier RG-48589
+        response.code = Constantes.CD_SUCCESS_CMN
+        response.message = "Chambre reservée avec succès"
+        response.data = booking
 
         return response;
     }
 
-    fun testUnitaire(){
+    fun createBookingTable(customer: Person, persons: List<Person>, id: Int): ManagerResponse<BookingTable> {
+        var response = ManagerResponse<BookingTable>()
+
+        // recupere un table dans le resto via l'id
+        var table = Table()
+        var booking = BookingTable(persons, table)
+
+        // Response Metier RG-48510
+        response.code = "203"
+        response.message = "Table reservée avec succès"
+        response.data = booking
+
+        return response
+    }
+
+    fun getAllBookingTable(): ManagerResponse<List<BookingTable>> {
+        var response = ManagerResponse<List<BookingTable>>()
+
+        // recupere un table dans le resto via l'id
+        var table = Table()
+        var booking = BookingTable(arrayListOf<Person>(), table)
+
+        var bookins = arrayListOf<BookingTable>(booking, booking)
+
+        // Response Metier RG-48510
+        response.code = "203"
+        response.message = "Table reservée avec succès"
+        response.data = bookins
+
+        return response
+    }
+
+
+    fun testUnitaire() {
         var manager = BookingManager()
 
-        var response = manager.createBooking(Person(), arrayListOf<Person>(Person()), 1, true)
+        var response = manager.createBookingRoom(Person(), arrayListOf<Person>(Person()), 1)
 
         // Assert.equal(response.code, "202")
-
+        var response2 = manager.getAllBookingTable()
         // Log.i(response)
     }
 }
