@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="vmCounter"
+            type="com.example.enidemo.demoviewmodel.CounterViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".demoviewmodel.DemoCounterActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:text="@{String.valueOf(vmCounter.counter)}"
+           />
+
+        <Button
+            android:id="@+id/btnCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Incrementer"
+            />
+
+    </LinearLayout>
+</layout>
