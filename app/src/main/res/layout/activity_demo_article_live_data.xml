@@ -15,6 +15,20 @@
         android:orientation="vertical"
         tools:context=".demoviewmodel.DemoArticleLiveDataActivity">
 
+<!--        Edition-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={vmEditArticle.article.title}"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={vmEditArticle.article.description}"
+            />
+
+<!--        Consultation-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

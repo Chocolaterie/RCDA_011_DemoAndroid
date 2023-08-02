@@ -9,6 +9,7 @@ import com.example.enidemo.databinding.ActivityDemoArticleLiveDataBinding
 import kotlin.random.Random
 
 class DemoArticleLiveDataActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -27,11 +28,9 @@ class DemoArticleLiveDataActivity : AppCompatActivity() {
             myActivityView.vmEditArticle = viewModel
         })
 
-
         // Lors du clique du bouton generer un article
         myActivityView.btnRandomArticle.setOnClickListener {
-            val title = String.format("Titre n° %d", Random.nextInt(1, 20))
-            viewModel.saveArticle(Article(title, "Les chocolatines et la pinte nutella c'est la vie"))
+            viewModel.saveArticle()
         }
     }
 }
