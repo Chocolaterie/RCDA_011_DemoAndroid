@@ -3,6 +3,7 @@ package com.example.enidemo.demoviewmodel
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.example.enidemo.R
 import com.example.enidemo.databinding.ActivityDemoArticleLiveDataBinding
